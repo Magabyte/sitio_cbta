@@ -1,0 +1,79 @@
+
+.footer-item:nth-child(2),
+.footer-item:nth-child(3)
+{
+    background: #1C2833;
+    color: #C0C0C0 ;
+}
+
+.footer-link{
+    display: inline-block;
+    padding: 1rem;
+}
+.contacto > span,
+.servicios > span,
+.redes-sociales > span{
+    font-family: 'Roboto','Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.3rem;
+    grid-column: 1/-1;
+}
+.direccion p:nth-child(1){
+    font-family: 'Roboto','Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.huitzilac,
+.tepoztlan,
+.jiutepec{
+    margin: .5rem;
+    border-bottom: solid #808080 1px;
+    border-radius: 4%;
+}
+.contacto,
+.servicios{
+    display: grid;
+    /* border: solid #808080 1px; */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,20rem), 1fr));
+    /* row-gap: 1rem; */
+}
+.redes-sociales a .logo{
+    width: 25px;
+}
+.redes-sociales{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(30px, 1fr));
+    /* gap: 1rem; */
+}
+.sombra{
+	transform: translateX(0);
+	transition-duration: .3s;
+}
+
+.sombra:before{
+	content: '';
+	position: absolute;
+	transition-duration: .3s;
+
+	width: 90%;
+	left: 5%;
+	top:100%;
+	height: 10px;
+	/*los colores se definen desde el centro al borde*/
+	background: radial-gradient(
+		center, ellipse,
+		rgba(0,0,0,0.35) 0%,
+		rgba(0,0,0,0) 80%
+		);
+	opacity: 0;
+}
+.sombra:hover{
+	transform: translateY(-5px);
+}
+.sombra:hover:before{
+	transform: translateY(5px);
+	opacity: 1;
+}
+
+
+

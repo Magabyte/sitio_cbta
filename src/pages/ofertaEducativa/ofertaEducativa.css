@@ -1,0 +1,144 @@
+.lista-modalidad{
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,30rem), 1fr));
+    margin: 1rem;
+    gap: 1rem;
+}
+.lista-modalidad,
+.lista{
+    list-style: none;
+    padding: 0px;
+}
+.title--oferta{
+    text-align: left;
+    margin: 1rem;
+}
+.lista-oferta{
+   text-align: left; 
+}
+.lista-oferta__item{
+    list-style: disc;
+}
+.lista-modalidad__item{
+    margin-bottom: 1rem;
+    /* border: 3px solid rgb(6, 16, 102); */
+}
+.lista-modalidad__item p{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background: rgb(6, 16, 102);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* AGROPECUARIO */
+.agropecuario,
+.administracion,
+.ofimatica{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,30rem), 1fr));
+    gap: 1rem;
+    /* margin: 1rem; */
+    padding: 1rem;
+    /* background: blue; */
+    min-height: 102vh;
+}
+.lista{
+    text-align: left;
+}
+.lista p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.lista .item{
+    margin-bottom: 8px;
+}
+
+/* Titulo */
+.agropecuario .title,
+.administracion .title,
+.ofimatica .title{
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    display: inline-block;
+    align-self: center;
+    z-index: 1;
+    color: white;
+}
+.agropecuario .lista,
+.administracion .lista,
+.ofimatica .lista{
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+}
+
+.agropecuario{
+    position: relative;
+    background-image: url("../../assets/img/cbta_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    color: rgb(202, 203, 204);
+}
+.agropecuario::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, #030320 50%, #003300 );
+    opacity: .88;
+}
+/* ----------------------------------------------------------------------------------------- */
+/* Administracion */
+.administracion{
+    position: relative;
+    background-image: url("../../assets/img/fondo-admin.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    color: aliceblue;
+}
+.administracion::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgb(37, 35, 35) 50%, #151b15 );
+    opacity: .70;
+}
+/* ---------------------------------------------------------------------------------------- */
+/* Ofimatica */
+.ofimatica{
+    position: relative;
+    background-image: url("../../assets/img/fondo-ofimatica.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    color: aliceblue;
+}
+.ofimatica::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgb(14, 2, 66) 50%, #0f1058 );
+    opacity: .70;
+}

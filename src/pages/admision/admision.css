@@ -1,0 +1,60 @@
+/* .admision{
+
+} */
+.documentos{
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    background: #0E2E54;
+    color: white;
+    align-items: center;
+
+}
+.documentos_title{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: .5rem;
+}
+.documentos_lista{
+    /* grid-area: documentos; */
+    text-align: left;
+    list-style: square;
+    margin-left: auto;
+    margin-right: auto;
+}
+.documento:nth-child(6) p{
+    margin-bottom: 0;
+}
+
+.documentos_icon{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* grid-area: icon; */
+
+}
+
+@media screen and (min-width: 576px) {
+    .documentos{
+        padding: 4rem;
+    }
+
+    .bg-p{
+        align-self: center;
+    }
+    .documentos_icon{
+        width: 600px;
+    }
+    .documentos_title{
+        font-size: 1.8rem;
+        color: #7BD489;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .documentos_title{
+        font-size: 2.5rem;
+        color: rgb(194, 194, 18);
+    }
+}

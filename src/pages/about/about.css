@@ -1,0 +1,154 @@
+
+.about{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.about-title{
+    font-size: 2.5rem;
+
+}
+/* vision mision valores */
+.vmv{
+    position: relative;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg,#740EBF , #0E29BF, #0E1EBF   );
+    opacity: .3;
+}
+
+.vmv .item{
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "contenido"
+    "logo";
+    margin: 1rem;
+    padding: 1rem;
+    gap: .5rem;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* logos */
+.vmv .item img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.vmv .item span{
+    grid-area: titulo;
+    justify-self: center;
+    font-family: 'Roboto' sans-serif;
+    font-size: 19px;
+}
+.vmv .item p{
+    grid-area: contenido;
+    font-size: 16px;
+}
+.vmv .item img{
+    grid-area: logo;
+}
+@media screen and (min-width: 576px) {
+   
+
+    .vmv{
+        display: grid;
+        grid-template-areas: 
+        "vision vision vision ."
+        ". mision mision mision"
+        "valores valores valores .";
+    } 
+    .vmv .item:nth-child(1),
+    .vmv .item:nth-child(2),
+    .vmv .item:nth-child(3){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-family: 'monospace' sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .vmv .item:nth-child(1){
+        grid-area: vision;
+    }
+    .vmv .item:nth-child(2){
+        grid-area: mision;
+    }
+    .vmv .item:nth-child(3){
+        grid-area: valores;
+        align-items: center;
+    }
+    .vmv .item{
+        grid-template-areas: 
+        "titulo titulo logo "
+        "contenido contenido logo"
+        "contenido contenido logo";
+    }
+    
+}
+.docentes{
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-template-columns: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+}
+.docente{
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgb(233, 232, 232)  ;
+}
+.docente > p{
+    text-align: left;
+    margin-bottom: 0;
+}
+.docente div img{
+    width: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,20rem), 1fr));
+    align-self: center;
+    justify-self: center;
+    border-radius: 50px;
+    border: solid rgb(182, 178, 178) 5px;
+    background: white;
+}
+.docente{
+   display: grid;
+   gap: 1rem;
+}
+.docente > div{
+    display: grid;
+    /* grid-template-columns: 80px repeat(auto-fill, minmax(min(100%,10rem), 1fr)); */
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+}
+.docente > p{
+    font-family: 'Roboto' sans-serif;
+    font-size: 1rem;
+}
+.featured{
+    grid-column: span 2;
+}
+.featured_row{
+    grid-row: span 2;
+}
+.datos__personales{
+    margin-bottom: 1rem;
+}
+.datos__personales > p{
+    margin: 0;
+    text-align: left;
+    font-size: .9rem;
+    font-family: sans-serif;
+    font-weight: 700;
+
+}

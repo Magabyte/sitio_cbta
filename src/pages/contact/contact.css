@@ -1,0 +1,53 @@
+.grid-contact{
+    display: grid;
+}
+
+.contact-mapa{
+    width: 350px;
+    height: 250px;
+}
+.contact-title{
+    text-transform: uppercase;
+}
+.correos{
+    display: grid;
+    justify-content: center;
+    text-align: left;
+}
+.correos_title{
+    font-weight: 700;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+}
+.correo_icon{
+    width: 30px;
+}
+.correo_text{
+    margin-left: 1rem;
+    display: inline-block;
+}
+@media screen and (min-width: 700px) {
+    .grid-contact{
+        grid-template-areas:
+        "title title"
+        "mapa correos";
+    }
+    .contact-title{
+        grid-area: title;
+    text-transform: uppercase;
+
+    }
+    .mapa{
+        grid-area: mapa;
+    }
+    .correos{
+        grid-area: correos;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .contact-mapa{
+        width: 700px;
+        height: 400px;
+    }
+}
